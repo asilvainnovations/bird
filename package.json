@@ -1,0 +1,38 @@
+{
+  "name": "bird-barmm-investment-roadmap",
+  "version": "1.0.0",
+  "description": "Bangsamoro Investment Roadmap Development (BIRD) 2026-2035 Document Generator",
+  "main": "src/generate-document.js",
+  "scripts": {
+    "build": "node src/generate-document.js",
+    "upload-gdocs": "node src/upload-to-gdocs.js",
+    "create-pdf": "node src/convert-to-pdf.js",
+    "full": "npm run build && npm run create-pdf",
+    "setup": "bash setup.sh",
+    "deploy": "npm run build && npm run upload-gdocs && npm run create-pdf"
+  },
+  "keywords": [
+    "BARMM",
+    "Investment",
+    "Bangsamoro",
+    "Roadmap",
+    "Halal",
+    "Economy",
+    "MTIT"
+  ],
+  "author": "Bureau of Investments – MTIT, BARMM",
+  "license": "MIT",
+  "dependencies": {
+    "docx": "^8.5.0",
+    "googleapis": "^131.0.0",
+    "@aspose.words-nodejs": "^25.5.0",
+    "puppeteer": "^22.15.0",
+    "fs-extra": "^11.2.0",
+    "dotenv": "^16.3.0",
+    "child_process": "^1.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
